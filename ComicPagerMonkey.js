@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         ComicPagerMonkey
+// @name         KeyStroke
 // @namespace    keystroke
 // @version      0.1
 // @description  Arrow-Key Support to Navigate WebComics
@@ -35,7 +35,9 @@
     prevSelectors.push('#comicnav li:nth-child(2) a'); //Questionable Content
         
 		
-		
+	
+    /* Kill overheight trenches header */
+    $('div#header div.content').remove();
 	
 	
 	
