@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         KeyStroke
+// @name         ComicPagerMonkey
 // @namespace    keystroke
 // @version      0.1
 // @description  Arrow-Key Support to Navigate WebComics
@@ -10,6 +10,7 @@
 // @match        http://oglaf.com/*
 // @match        http://www.questionablecontent.net/*
 // @match        http://trenchescomic.com/*
+// @match        http://www.gocomics.com/*
 
 // @require      https://code.jquery.com/jquery-1.11.3.min.js
 // ==/UserScript==
@@ -24,6 +25,7 @@
     nextSelectors.push('a.btnNext'); // Penny Arcade
     nextSelectors.push('#nav a:not(.mn)'); //Oglaf
     nextSelectors.push('#comicnav li:nth-child(3) a'); //Questionable Content
+    nextSelectors.push('a.next'); // Calvin n Hobbes
         
 	
 	
@@ -33,6 +35,7 @@
     prevSelectors.push('.comic_nav_link.prev_comic_link'); //myextralife
     prevSelectors.push('a.btnPrev'); // Penny Arcade
     prevSelectors.push('#comicnav li:nth-child(2) a'); //Questionable Content
+    prevSelectors.push('a.prev'); //Calvin n Hobbes
         
 		
 	
