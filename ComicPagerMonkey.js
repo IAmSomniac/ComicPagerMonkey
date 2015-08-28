@@ -11,6 +11,7 @@
 // @match        http://www.questionablecontent.net/*
 // @match        http://trenchescomic.com/*
 // @match        http://www.gocomics.com/*
+// @match        http://www.megacynics.com/*
 
 // @require      https://code.jquery.com/jquery-1.11.3.min.js
 // ==/UserScript==
@@ -26,6 +27,8 @@
     nextSelectors.push('#nav a:not(.mn)'); //Oglaf
     nextSelectors.push('#comicnav li:nth-child(3) a'); //Questionable Content
     nextSelectors.push('a.next'); // Calvin n Hobbes
+    nextSelectors.push('a.nav_button.nav_next'); //Megacynics
+    
         
 	
 	
@@ -36,12 +39,16 @@
     prevSelectors.push('a.btnPrev'); // Penny Arcade
     prevSelectors.push('#comicnav li:nth-child(2) a'); //Questionable Content
     prevSelectors.push('a.prev'); //Calvin n Hobbes
+    prevSelectors.push('a.nav_button.nav_previous'); //Megacynics
         
 		
 	
     /* Kill overheight trenches header */
     $('div#header div.content').remove();
 	
+    /* Megacynics header */
+    $('div#mc_headerWrap, .sponsor_space').remove();
+    
 	
 	
     var debug = function(obj){
