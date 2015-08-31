@@ -6,7 +6,7 @@
 // @author       Daniel Wilking
 
 // @match        http://www.myextralife.com/comic/*
-// @match        http://www.penny-arcade.com/comic/*
+// @match        http://www.penny-arcade.com/*
 // @match        http://oglaf.com/*
 // @match        http://www.questionablecontent.net/*
 // @match        http://trenchescomic.com/*
