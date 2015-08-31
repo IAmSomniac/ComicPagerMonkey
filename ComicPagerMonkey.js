@@ -18,6 +18,9 @@
 
 (function($){
     var debugMode = false;
+	
+	var key_save = 38;
+	var key_load = 40;
     
     var key_next=39;
 	var nextSelectors = [];
@@ -108,12 +111,24 @@
             window.location = prevHref;
         }
     };
+	
+	var performSave = function(){
+		localStorage.setItem('latest-comic',window.location);
+	};
+	
+	var performLoad = function(){
+		window.location = localStorage.getItem('latest-comic');
+	};
     
     $('body').on('keydown', function(evt){
         if(parseInt(evt.which) === parseInt(key_next)){
             performNext();
         }else if (parseInt(evt.which) === parseInt(key_prev)){
             performPrev();
-        }
+        }else if(parseInt(evt.which) === parseInt(key_save)){
+			performSave();
+		}else if(parseInt(evt.which) === parseInt(key_load)){
+			performLoad();
+		}
     });
 })(jQuery);
