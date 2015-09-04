@@ -117,7 +117,9 @@
 	};
 	
 	var performLoad = function(){
-		window.location = localStorage.getItem('latest-comic');
+        if(localStorage.getItem('latest-comic')){
+            window.location = localStorage.getItem('latest-comic');
+        }
 	};
     
     $('body').on('keydown', function(evt){
